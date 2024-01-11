@@ -7,7 +7,7 @@ import { setProfile } from "../redux/state/profileSlice";
 import { setsearchUsers } from "../redux/state/chatSlice";
 import { socket } from "../components/ChatBox";
 
-const BaseURL = "http://localhost:5000/api";
+const BaseURL = "https://deeptalk-be.onrender.com/api";
 const AxiosHeader = { headers: { "token": getToken() } };
 
 export const RegistrationRequest = (firstname, lastname, email, password) => {

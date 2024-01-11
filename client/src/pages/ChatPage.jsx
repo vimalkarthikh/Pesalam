@@ -45,11 +45,11 @@ const ChatPage = () => {
       <GroupInfo state={state} dispatch={dispatch} />
       <Header />
       <div className="w-full h-[89.5vh] overflow-hidden">
-        <div className="flex justify-start items-center bg-white w-full h-full">
-          <div className={`${selectUser ? 'hidden lg:block' : 'block'} bg-white w-full lg:w-1/3 h-full`}>
+        <div className="flex justify-start items-center bg-transparent w-full h-full">
+          <div className={`${selectUser ? 'hidden lg:block' : 'block'} bg-gray-700 w-full lg:w-1/3 h-full`}>
             <MyChat myChats={myChats} dispatch={dispatch}/>
           </div>
-          <div className={`${selectUser ? 'block' : 'hidden lg:block'} bg-white w-full lg:w-2/3 h-full`}>
+          <div className={`${selectUser ? 'block' : 'hidden lg:block'}  w-full lg:w-2/3 h-full`}>
             <ChatBox dispatch={dispatch} />
           </div>
         </div>

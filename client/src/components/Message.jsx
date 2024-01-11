@@ -47,7 +47,7 @@ const Message = ({ messages, isTyping, typingUser }) => {
         <div
        
     >
-        <ReactScrollableFeed className='py-4 ps-3 pe-5 md:ps-5 md:pe-7 xl:pe-12 mt-auto'  > 
+        <ReactScrollableFeed className='py-4 ps-3 pe-5 md:ps-5 bg-transparent md:pe-7 xl:pe-12 mt-auto'  > 
             {/* <img src={'./logo.png'} alt="" /> */}
 
             {
@@ -57,7 +57,7 @@ const Message = ({ messages, isTyping, typingUser }) => {
                             {
                                 isPlaceDate(messages, i) &&
                                 <div className="flex justify-center my-2">
-                                    <span className="px-2 py-1 bg-gray-300 font-medium text-gray-600 rounded-md text-sm">{moment(messages[i]?.createdAt).format('MMMM Do YYYY')}</span>
+                                    <span className="px-2 py-1 bg-gray-300 font-medium text-black rounded-md text-sm">{moment(messages[i]?.createdAt).format('MMMM Do YYYY')}</span>
                                 </div>
                             }
                             <div key={i} className={`mt-0.5 max-full flex`}>
@@ -106,27 +106,16 @@ const Message = ({ messages, isTyping, typingUser }) => {
                                                     <div>
                                                         {
                                                             msg.chat.isGroupChat &&
-                                                            <span className="pl-2 text-sm text-gray-700">{msg.sender.firstname}</span>
+                                                            <span className="pl-2 text-sm text-black">{msg.sender.firstname}</span>
                                                         }
-                                                        <div className="bg-gray-300 p-2 rounded-r-[20px] rounded-l-[20px]">
-                                                            <p className="text-sm px-3">{msg.content}</p>
+                                                        <div className="bg-black p-2 rounded-r-[20px] rounded-l-[20px]">
+                                                            <p className="text-sm text-white px-3">{msg.content}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ) : isSamesenderUpperMsg(messages, msg, i) ?
                                                 (
-                                                    <div className="flex w-full ml-[44px] space-x-3 max-w-[339px] mt-3 mr-24 md:mr-12" style={{
-                                                        backgroundImage: `url('./th.jpg')`,
-                                                        backgroundSize: 'cover',
-                                                        backgroundPosition: 'center',
-                                                        backgroundRepeat: 'no-repeat',
-                                                        width: "100%",
-                                                        // height: '100%',
-                                                        // margin:"10px",
-                                                        // display: 'flex',
-                                                        justifyContent: 'center',
-                                                        alignItems: 'center',
-                                                    }}>
+                                                    <div className="flex w-full ml-[44px] space-x-3 max-w-[339px] mt-3 mr-24 md:mr-12" >
                                                         <div>
                                                             {
                                                                 msg.chat.isGroupChat &&

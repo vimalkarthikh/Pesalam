@@ -13,7 +13,7 @@ import io from "socket.io-client";
 import { setNotification, setOnlineUsers } from '../redux/state/settingSlice'
 import { myChatRequest } from '../apiRequest/chatRequset'
 
-const ENDPOINT = "https://chat-app-mern-qfhu.onrender.com/"
+const ENDPOINT = "https://deeptalk-be.onrender.com/"
 export var socket, selectedChatCompare
 
 const ChatBox = ({ dispatch }) => {
@@ -115,8 +115,8 @@ const ChatBox = ({ dispatch }) => {
         <Fragment>
             {
                 selectUser &&
-                <div className="flex flex-col bg-white overflow-hidden flex-grow h-[89.5vh]"
-                style={{ backgroundImage: `url(${require('../assets/images/bg-chat.png')})` }}
+                <div className="flex flex-col bg-transparent overflow-hidden flex-grow h-[89.5vh]"
+                
                 >
                     <div className="flex justify-between bg-white px-2 lg:px-4 py-2 border-b-2">
                         <div className="flex flex-none space-x-1 md:space-x-3 items-center">
@@ -182,7 +182,7 @@ const ChatBox = ({ dispatch }) => {
                         loading ?
                             <MessageFetchingLoader />
                             :
-                            <div className="flex flex-col w-full max-h-auto relative bg-black-rgba scroller overflow-x-hidden overflow-y-auto flex-grow">
+                            <div className="flex flex-col w-full max-h-auto relative  scroller overflow-x-hidden overflow-y-auto flex-grow">
                                 <Message messages={allMessage} isTyping={isTyping} typingUser={typingUser} />
 
                             </div>

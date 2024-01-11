@@ -5,7 +5,7 @@ import store from "../redux/store/store";
 import { getToken, getUserDetails } from "../helper/sessionHelper";
 import { setMyChats, setSelectUser } from "../redux/state/chatSlice";
 
-const BaseURL = "http://localhost:5000/api";
+const BaseURL = "https://deeptalk-be.onrender.com/api";
 const AxiosHeader = { headers: { "token": getToken() } };
 
 export const myChatRequest = async () => {

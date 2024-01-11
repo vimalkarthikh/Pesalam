@@ -66,9 +66,9 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div className="flex justify-between bg-[#582b8b] px-4 py-2 z-10">
+            <div className="flex justify-between bg-[#2884af] px-4 py-2 z-10">
                 <div className="logo flex items-center cursor-pointer">
-                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/tail-of-whale.png" alt="tail-of-whale"/> 
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/tail-of-whale.png" alt="tail-of-whale" class="filter invert-100"/>
 
                     <span class="text-2xl font-bold text-white "> Deep Talk</span>
                 </div>
