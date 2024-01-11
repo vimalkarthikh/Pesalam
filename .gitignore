@@ -32,3 +32,6 @@ dist-ssr
 .pub
 
 
+
+# Local Netlify folder
+.netlify
